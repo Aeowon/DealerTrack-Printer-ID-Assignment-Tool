@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "DealerTrack - Printer ID Assignment Tool",
+  "version": "1.0",
+  "description": "Find and replace Printer ID values in DealerTrack DMS",
+  "author": "Matt Smith (https://matt.work)",
+  "permissions": ["scripting", "activeTab", "webNavigation", "tabs"],
+  "host_permissions": [
+    "https://*.dealertrackdms.app.coxautoinc.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "DealerTrack - Printer ID Assignment Tool",
+    "default_icon": {
+      "16": "favicon-16x16.png",
+      "32": "favicon-32x32.png",
+      "48": "favicon-32x32.png",
+      "128": "android-chrome-192x192.png"
+    }
+  },
+  "icons": {
+    "16": "favicon-16x16.png",
+    "32": "favicon-32x32.png",
+    "48": "favicon-32x32.png",
+    "128": "android-chrome-192x192.png"
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+body { width: 300px; background: #fff; }
+.hdr { background: #006599; color: #fff; padding: 12px 14px; font-size: 14px; font-weight: bold; }
+.body { padding: 14px; }
+.lbl { font-size: 11px; font-weight: bold; color: #555; margin: 10px 0 3px; }
+input[type=text] { width: 100%; padding: 6px 8px; border: 1px solid #bbb; border-radius: 4px; font-size: 13px; }
+input[type=text]:focus { outline: none; border-color: #006599; }
+.preview { margin-top: 10px; background: #f5f7f9; border: 1px solid #dde; border-radius: 4px; padding: 7px; font-size: 11px; max-height: 120px; overflow-y: auto; min-height: 26px; color: #333; line-height: 1.6; }
+.btns { display: flex; gap: 8px; margin-top: 10px; }
+.btns button { flex: 1; padding: 8px; border: none; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer; }
+.btns2 { display: flex; gap: 8px; margin-top: 6px; }
+.btns2 button { flex: 1; padding: 7px; border: none; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer; }
+#doBtn { background: #aaa; color: #fff; }
+#doBtn.on { background: #006599; }
+#clearBtn { background: #c0392b; color: #fff; }
+#exportBtn { background: #eee; color: #333; border: 1px solid #ccc; }
+#importBtn { background: #eee; color: #333; border: 1px solid #ccc; }
+#status { margin-top: 8px; font-size: 12px; text-align: center; min-height: 16px; color: #060; }
+#err { color: #c00; font-size: 12px; margin-top: 8px; text-align: center; display: none; }
+</style>
+</head>
+<body>
+<div class="hdr">DealerTrack - Printer ID Assignments Tool</div>
+<div class="body">
+  <div class="lbl">Find <span style="font-weight:normal;color:#999">(blank = all)</span></div>
+  <input type="text" id="fi" placeholder="e.g. PRINTER1">
+  <div class="lbl">Replace with</div>
+  <input type="text" id="ri" placeholder="e.g. PRINTER2" maxlength="10">
+  <div class="preview" id="pv">Loading...</div>
+  <div class="btns">
+    <button id="doBtn" disabled>Replace All (0)</button>
+    <button id="clearBtn">Clear All</button>
+  </div>
+  <div class="btns2">
+    <button id="exportBtn">⬇ Export</button>
+    <button id="importBtn">⬆ Import</button>
+    <input type="file" id="importFile" accept=".txt" style="display:none">
+  </div>
+  <div id="status"></div>
+  <div id="err">Printer ID fields not found.<br>Go to the DMS Printer Assignments screen first.</div>
+<div style="margin-top:10px;font-size:10px;color:#aaa;text-align:center">
+  Created by <a href="https://matt.work" target="_blank" style="color:#aaa">Matt Smith</a> &mdash; on 5/3/2026
+</div>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
