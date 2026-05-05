@@ -23,7 +23,7 @@ A lightweight Chrome extension for finding, replacing, exporting, and importing 
 
 ## Usage
 
-1. Open the DealerTrack DMS page that contains the Printer ID grid.
+1. Open the DealerTrack DMS page Printer Assignments.
 2. Open the extension popup.
 3. Enter a value in **Find** and **Replace with**.
 4. Click **Replace All** to update matching rows.
